@@ -20,9 +20,6 @@ const SOCKET_PATH: &str = "/tmp/yasu.sock";
 
 fn main() {
     let args: Vec<String> = env::args().collect();    
-    if args.len() < 2 {
-       // 
-    }
     if args.get(1).map(String::as_str).unwrap_or("") == "--daemon" {
         run_daemon();
     } else {
