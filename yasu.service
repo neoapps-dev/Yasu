@@ -1,0 +1,12 @@
+[Unit]
+Description=yasu
+After=network.target
+
+[Service]
+ExecStart=/home/neo/yasu/target/release/yasu --daemon
+Type=simple
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
